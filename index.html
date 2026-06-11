@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#071827" />
+  <title>Smart Fish Tank</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="/styles.css?v=minimal-1" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="kicker">Smart Fish Tank</p>
+        <h1>Monitor</h1>
+      </div>
+      <span id="connectionBadge" class="badge offline">Offline</span>
+    </header>
+
+    <section class="actions primary-actions" aria-label="Main actions">
+      <button id="connectBluetoothBtn">Connect Bluetooth</button>
+      <button id="feedNowBtn" class="secondary">Feed Now</button>
+    </section>
+
+    <section class="sensor-grid" aria-label="Sensors">
+      <article class="sensor-card">
+        <span>Temperature</span>
+        <strong id="temperature">—</strong>
+      </article>
+
+      <article class="sensor-card">
+        <span>Water level</span>
+        <strong id="waterLevel">—</strong>
+      </article>
+
+      <article class="sensor-card wide">
+        <span>Turbidity</span>
+        <strong id="turbidity">—</strong>
+      </article>
+    </section>
+
+    <p id="statusText" class="status-text">Starting app…</p>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Prototype controls</h2>
+        <span>testing only</span>
+      </div>
+      <div class="actions compact-actions">
+        <button id="simulateOkBtn" class="ghost">Simulate OK</button>
+        <button id="simulateLowBtn" class="ghost danger">Simulate LOW</button>
+        <button id="simulateTurbidBtn" class="ghost warning">Simulate dirty water</button>
+        <button id="simulateTempBtn" class="ghost">Simulate 28°C</button>
+        <button id="enableNotificationsBtn" class="ghost">Enable notifications</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Bluetooth settings</h2>
+        <span>BLE UUIDs</span>
+      </div>
+      <label>
+        Service UUID
+        <input id="serviceUuid" value="0000fff0-0000-1000-8000-00805f9b34fb" />
+      </label>
+      <label>
+        Data characteristic UUID
+        <input id="dataUuid" value="0000fff1-0000-1000-8000-00805f9b34fb" />
+      </label>
+      <label>
+        Command characteristic UUID
+        <input id="commandUuid" value="0000fff2-0000-1000-8000-00805f9b34fb" />
+      </label>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Recent events</h2>
+        <span id="lastReading">No readings yet</span>
+      </div>
+      <ol id="eventLog" class="event-log"></ol>
+    </section>
+
+    <div class="hidden-state" aria-hidden="true">
+      <span id="phoneStatus">Stable</span>
+      <span id="waterHelp"></span>
+      <span id="temperatureHelp"></span>
+      <span id="turbidityHelp"></span>
+      <span id="deviceId">fishtank-01</span>
+      <span id="lowDuration">0s</span>
+      <span id="alertState">No alert</span>
+    </div>
+  </main>
+
+  <script src="/app.js?v=minimal-1"></script>
+</body>
+</html>

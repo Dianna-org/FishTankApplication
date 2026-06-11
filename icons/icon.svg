@@ -1,0 +1,9 @@
+<!-- icons/icon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="100%" height="100%" rx="48" fill="#0a84ff"/>
+  <g transform="translate(0,0)" fill="#fff" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="256" y="260" font-size="140" font-weight="700">FT</text>
+    <text x="256" y="380" font-size="36" font-weight="500">Monitor</text>
+  </g>
+</svg>
+

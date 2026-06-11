@@ -1,0 +1,9 @@
+{
+  "name": "Smart Fish Tank",
+  "short_name": "Fish Tank",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071827",
+  "theme_color": "#071827",
+  "icons": []
+}
